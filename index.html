@@ -1,67 +1,74 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-    <head>
-        <meta charset="utf8">
-        <title>Bubble Shooter</title>
-        
-        <!-- CSS links -->
-        <link href="_css/main.css" rel="stylesheet">
-        
-        <!-- Frameworks and libraries links -->
-        <script src="_js/modernizr.js"></script>
-        
-        <!-- Inner scripts -->
-        <script>
-            Modernizr.load([{
-                load: "//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js",
-                complete: function () {
-                    if(!window.jQuery){
-                        Modernizr.load("_js/jquery-2.2.4.min.js");
-                    }
-                }
-            },
-            {
-                load: "_js/game.js"
-            }]);
-        </script>
-    </head>
-    
-    <body>
-       <!-- page -->
-        <div id="page">
-           
-            <!-- top_bar -->
-            <div id="top_bar">
-                
-            </div><!-- /.top_bar -->
-            
-            <!-- game -->
-            <div id="game">
-                
-            </div><!-- /.game -->
-            
-            <!-- footer_bar -->
-            <div id="footer_bar">
-              
-               <!-- start_game -->
-               <div id="start_game" class="dialog">
-                  
-                   <!-- start_game_message -->
-                   <div id="start_game_message">
-                       <h2>
+
+<head>
+    <meta charset="utf8">
+    <title>Bubble Shooter</title>
+
+    <!-- CSS links -->
+    <link href="_css/main.less" rel="stylesheet/less" type="text/css">
+
+    <!-- Frameworks and libraries links -->
+    <!-- ||Jquery script link|| -->
+    <script src="_js/jquery-2.2.4.min.js"></script>
+    <!-- ||Less script link|| -->
+    <script src="_js/less.min.js" type="text/javascript"></script>
+
+    <!-- Personal script links -->
+    <!-- ||game.js script link|| -->
+    <script src="_js/game.js" type="text/javascript"></script>
+    <!-- ||ui.js script link|| -->
+    <script src="_js/ui.js" type="text/javascript"></script>
+    <!-- ||index.js script link|| -->
+    <script src="_js/index.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+    <!-- page -->
+    <div id="page">
+
+        <!-- top_bar -->
+        <div id="top_bar">
+
+        </div>
+        <!-- /.top_bar -->
+
+        <!-- game -->
+        <div id="game">
+
+        </div>
+        <!-- /.game -->
+
+        <!-- footer_bar -->
+        <div id="footer_bar">
+
+            <!-- start_game -->
+            <div id="start_game" class="dialog">
+
+                <!-- start_game_message -->
+                <div id="start_game_message">
+                    <h2>
                            Start a new game
                        </h2>
-                   </div><!-- /.start_game_message -->
-                   
-                   <!-- but_start_game button -->
-                   <div class="but_start_game button">
-                       New Game
-                   </div><!-- /.but_start_game button -->
-                   
-               </div><!-- /.start_game --> 
-               
-            </div><!-- /.footer_bar -->
-            
-        </div><!-- /.page -->
-    </body>
+                </div>
+                <!-- /.start_game_message -->
+
+                <!-- but_start_game button -->
+                <div class="but_start_game button">
+                    New Game
+                </div>
+                <!-- /.but_start_game button -->
+
+            </div>
+            <!-- /.start_game -->
+
+        </div>
+        <!-- /.footer_bar -->
+
+    </div>
+    <!-- /.page -->
+</body>
+
 </html>
