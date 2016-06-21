@@ -6,7 +6,8 @@ BubbleShoot.Game = (function ($) {
             $(".but_start_game").on("click", startGame);
         };
         var startGame = function () {
-            
+            $(".but_start_game").off("click");
+            BubbleShoot.ui.hideDialog();
         };
     };
     return Game;
