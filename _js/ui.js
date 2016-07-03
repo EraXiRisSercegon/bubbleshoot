@@ -6,7 +6,8 @@ display functionality.
 var BubbleShoot = window.BubbleShoot || {};
 BubbleShoot.ui = (function ($) {
     var ui = {
-        BUBBLE_DIMS: 110,
+        BUBBLE_DIMS: 48,
+        ROW_HEIGHT: 47,
         init: function () {},
         hideDialog: function () {
             $(".dialog").fadeOut(300);
@@ -46,6 +47,26 @@ BubbleShoot.ui = (function ($) {
                 duration: duration,
                 easing: "linear"
             });
+        },
+        drawBoard: function (board) {
+            var rows = board.getRows();
+            var gameArea = $("#board");
+            for (var i = 0; i < rows.length; i++) {
+                var row = rows[i];
+                for (var j = 0; j < row.length; j++) {
+                    var bubble = row[j];
+                    if (bubble) {
+                        var sprite = bubble.getSprite();
+                        gameArea.append(sprite);
+                        var left = j * ui.BUBBLE_DIMS / 2;
+                        var top = i * ui.ROW_HEIGHT;
+                        sprite.css({
+                            left: left,
+                            top: top
+                        });
+                    };
+                };
+            };
         }
 
     };
